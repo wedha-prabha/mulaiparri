@@ -1,0 +1,19 @@
+{
+  "appId": "com.mulaiparri.app",
+  "appName": "Mulaiparri Microgreens",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "PushNotifications": {
+      "presentationOptions": ["badge", "sound", "alert"]
+    },
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#1E3F1C",
+      "showSpinner": false
+    }
+  }
+}

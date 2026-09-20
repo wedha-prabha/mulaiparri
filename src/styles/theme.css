@@ -1,0 +1,106 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --color-forest: #1E3F1C;
+  --color-sprout: #2D5A27;
+  --color-sage: #4A7C59;
+  --color-lime: #88B04B;
+  --color-earth: #D4A373;
+  --color-sand: #F4EBE1;
+  --color-cream: #FAF6F0;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #FAF6F0;
+  color: #2D3748;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom Glassmorphism & Cards */
+.glass-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.organic-card {
+  background: #ffffff;
+  border: 1px solid rgba(45, 90, 39, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(30, 63, 28, 0.05);
+  border-radius: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.organic-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(30, 63, 28, 0.12);
+  border-color: rgba(136, 176, 75, 0.4);
+}
+
+/* Shimmer animation for loading states */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #F4EBE1 25%, #FAF6F0 50%, #F4EBE1 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EBE1;
+}
+::-webkit-scrollbar-thumb {
+  background: #4A7C59;
+  border-radius: 4px;
+}
+
+/* Micro-animations */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Custom Green Gradient Buttons */
+.btn-mulaiparri {
+  background: linear-gradient(135deg, #1E3F1C 0%, #2D5A27 100%);
+  color: #ffffff;
+  border-radius: 0.85rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+.btn-mulaiparri:hover {
+  background: linear-gradient(135deg, #2D5A27 0%, #4A7C59 100%);
+  box-shadow: 0 8px 20px -6px rgba(30, 63, 28, 0.4);
+}
+
+.btn-mulaiparri-accent {
+  background: linear-gradient(135deg, #88B04B 0%, #6E9B34 100%);
+  color: #ffffff;
+  border-radius: 0.85rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+.btn-mulaiparri-accent:hover {
+  background: linear-gradient(135deg, #6E9B34 0%, #567C27 100%);
+  box-shadow: 0 8px 20px -6px rgba(136, 176, 75, 0.4);
+}

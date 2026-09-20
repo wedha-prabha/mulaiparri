@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-down'; // Wait, let's import from 'react-router-dom'!
-import { Link as RouterLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Leaf, Sun, Droplets, ShieldCheck, HeartPulse, Award, ArrowRight } from 'lucide-react';
 
 export default function AboutPage() {
@@ -92,10 +91,10 @@ export default function AboutPage() {
           </div>
 
           <div className="text-center pt-4">
-            <RouterLink to="/shop" className="btn-mulaiparri-accent inline-flex items-center gap-2 px-6 py-3 text-xs font-bold shadow-lg">
+            <Link to="/shop" className="btn-mulaiparri-accent inline-flex items-center gap-2 px-6 py-3 text-xs font-bold shadow-lg">
               <span>Taste the Freshness</span>
               <ArrowRight className="w-4 h-4" />
-            </RouterLink>
+            </Link>
           </div>
 
         </div>

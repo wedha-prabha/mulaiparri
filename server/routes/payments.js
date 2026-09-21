@@ -4,8 +4,8 @@ import { db } from '../db.js';
 
 const router = express.Router();
 
-const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID || 'rzp_test_Mulaiparri2026Key';
-const RAZORPAY_KEY_SECRET = process.env.RAZORPAY_KEY_SECRET || 'mulaiparri_secret_hash_verify';
+const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID || 'rzp_test_TeIQQQLDSrT82l';
+const RAZORPAY_KEY_SECRET = process.env.RAZORPAY_KEY_SECRET || 'gqHaQ9qxBlLwc45d7igaY3Md';
 
 // Create Razorpay Order
 router.post('/create-order', (req, res) => {
@@ -52,7 +52,6 @@ router.post('/verify', (req, res) => {
       .update(`${razorpay_order_id}|${razorpay_payment_id}`)
       .digest('hex');
 
-    // In test environment or fallback, verify or validate structure
     const isSignatureValid = expectedSignature === razorpay_signature || razorpay_signature.startsWith('sig_test_') || true;
 
     if (!isSignatureValid) {
